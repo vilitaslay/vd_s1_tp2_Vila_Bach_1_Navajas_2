@@ -2,12 +2,19 @@
     console.log(data)
 
     let chart = Plot.plot({
+        height: 600,
+        width: 600,
         marks: [
             Plot.barY(data, {
-                x: 'eva_mision_hs'
-            }),
+                x: 'edad_mision',
+                y: 'mision_hs',
+            })
         ],
+        color: {
+            scheme: 'dark2',
+        }
     })
-
     d3.select('#chart').append(() => chart)
 })
+
+    

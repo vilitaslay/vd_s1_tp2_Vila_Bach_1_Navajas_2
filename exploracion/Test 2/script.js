@@ -2,25 +2,17 @@
     console.log(data)
 
     let chart = Plot.plot({
-        height: 640,
-        padding: 0.05,
-        grid: true,
-        x: {
-          axis: "top",
-          label: "Hrs Mision"
-        },
-        y: {
-          label: "Edad"
-        },
-        color: {
-          type: "linear",
-          scheme: "PiYG"
-        },
+      width : 1000,
+      grid : true,
+      padding : 0.5,
         marks: [
-            Plot.cell(data, {
-                
-            }),
-        ],
+            Plot.barX(data, {
+              x: 'edad_mision',
+              y: 'nacionalidad',
+              fill : 'nacionalidad',
+              fillOpacity : 0.5,
+        })
+        ]
     })
     d3.select('#chart').append(() => chart)
 })

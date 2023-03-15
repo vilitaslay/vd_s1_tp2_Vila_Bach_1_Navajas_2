@@ -7,6 +7,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           x: 'anio_nacimiento',
           y: 'nacionalidad',
           opacity:0.5,
+          fill:'genero',
         }),
       ],
       color:{

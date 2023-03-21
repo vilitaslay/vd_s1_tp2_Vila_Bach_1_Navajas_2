@@ -1,18 +1,18 @@
 d3.csv('astronautas.csv', d3.autoType).then(data => {
   let chart = Plot.plot({
     marks: [
-      Plot.dot(data, {
-        x: 'ocupacion',
-        y: 'anio_nacimiento',
+      Plot.barY(data, {
+        x: 'anio_mision',
+        y: 'mision_hs',
         r: 'mision_hs',
-        fill: 'genero',
-        opacity:0.5
+        opacity: 0.8,
       }),
     ],
     grid: true,
     line: true,
     nice: true,
     color: {
+      scheme : '',
       legend: true,
     },
   })

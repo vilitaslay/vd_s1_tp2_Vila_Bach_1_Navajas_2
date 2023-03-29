@@ -13,10 +13,11 @@
               y: 'mision_hs',
               fill : 'nacionalidad',
               stroke : 'nacionalidad',
+              sort : {x: 'y', reverse : true}
         })
         ],
         x : {
-          label : 'Nacion',
+          label : 'Nación',
           labelOffset : 40,
         },
 

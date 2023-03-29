@@ -6,11 +6,17 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
             Plot.dot(data, {
                 x: 'genero',
                 y: 'edad_mision',
-                r : 'mision_hs',
                 fill : 'genero',
                 fillOpacity : 0.5,
+                r : 5,
             })
         ],
+        x : {
+            label : 'Género',
+        },
+        y : {
+            label : 'Edad en la misión',
+        },
         grid: true,
         color : {
             scheme: 'set2',

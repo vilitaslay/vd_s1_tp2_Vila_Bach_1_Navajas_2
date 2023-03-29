@@ -2,16 +2,14 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   let chart = Plot.plot({
     width : 800,
     height : 400,
-    margin : 60,
     marks: [
-      Plot.line(data, {
-        x: 'edad_mision',
-        y: 'nacionalidad',
-        z: 'nombre',
-        stroke: 'status',
-        strokeWidth: 8,
-        opacity: 0.5,
-      }),
+      Plot.line(data, Plot.groupX({y : 'count'}, {
+        x:'anio_mision', 
+        y : 'nombre', 
+        z : 'ocupacion', 
+        stroke: 'ocupacion', 
+        curve : 'natural',
+    })), 
     ],
     
     x: {

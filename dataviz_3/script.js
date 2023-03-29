@@ -13,19 +13,23 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     ],
     
     x: {
-      label : 'Edad',
+      label : 'Año',
       labelOffset : 50,
+      tickFormat: 'i',
     },
     y: { 
       zero: true, 
-      label : 'Nacionalidad', 
-      labelOffset : 50, 
+      label : 'frecuencia',
+      labelOffset : 30, 
     },
     line: true,
     color:{
       scheme: 'set1',
       legend: true,
     },
+    style :{
+      background: 'rgb(250, 250, 250)',
+    }
   })
   d3.select('#chart').append(() => chart)
 })

@@ -2,25 +2,33 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     console.log(data)
 
     let chart = Plot.plot({
+        inset: 20,
+        margin: 40,
+        grid:true,
         marks: [
-            Plot.dot(data, {
-                x: 'genero',
+            Plot.line(data, Plot.groupX({y : 'mean'}, {
+                x: 'anio_mision',
                 y: 'edad_mision',
-                fill : 'genero',
-                fillOpacity : 0.5,
-                r : 5,
-            })
+                z: 'genero',
+                stroke: 'genero',
+                strokeWidth: 3,
+            })),
         ],
         x : {
-            label : 'Género',
+            label : 'Año',
+            tickFormat: 'i',
+            labelOffset: 30
         },
         y : {
-            label : 'Edad en la misión',
+            label : 'Promedio de edad',
+            labelOffset: 30,
         },
-        grid: true,
         color : {
             scheme: 'set2',
-            legend : true,
+            legend: true,
+        },
+        style : {
+            background: 'rgb(250, 250, 250)',
         }
     })
 

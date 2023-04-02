@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visualización 1</title>
     <style>
+      button {
+        background-color:rgb(250, 250, 250);
+        color : #665544;
+        border: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+      }
       #chart{
         overflow-y:auto;
       }
@@ -19,7 +29,7 @@
         background: rgb(250, 250, 250)
       }
       h1{
-        
+        padding-left: 20px;
       }
       h3 {
         padding: 20px;
@@ -32,13 +42,16 @@
     </style>
   </head>
   <body>
-    <h1>Misoginia espacial</h1>
+    <a href="../../index.html">
+      <button type = "button">menu</button>
+    </a>
+    <h1>Edades Promedio</h1>
     <h3>Analizamos como cambia el promedio de la edad de los astronautas a lo largo de los años, dividido entre mujeres y hombres.</h3>
 
     <div id="chart"></div><br>
-    <p><i>Datos obtenidos de <b>Astronautas.csv</b></i></p>
+    <p><i>Datos obtenidos de <b>NASA,  </b></i></p>
     <p><i>Autores: Juan Vila Bach, Victor Navajas</i></p>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>

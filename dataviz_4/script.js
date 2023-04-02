@@ -3,28 +3,35 @@ let chart
 d3.csv('astronautas.csv', d3.autoType).then(data => {
   chart = Plot.plot({
     marks: [
-      Plot.barY(data, Plot.groupX({y : 'count'}, {
-        x: 'ocupacion',
-        y: 'nombre',
-        fill: 'genero'
-  })),
+      Plot.cell(data, Plot.group({fill : 'count'}, {
+        x: 'anio_nacimiento',
+        y: 'anio_mision',
+        fill: 'nombre',
+      })),
     ],
     grid: true,
     nice: true,
     zero: true,
-    width: 1100,
-    height: 400,
+    height: 500,
+    width: 1000,
     margin : 50,
     x : {
       label : null,
+      tickFormat: 'i',
     },
     y : {
-      label : 'Horas de Misión'
+      label : null,
+      labelOffset: 20,
+      tickFormat: 'i',
     },
     color : {
-      scheme : 'dark2',
-      legend: true,
-    }
+      scheme: 'greens',
+      nice: true,
+      legend: "ramp",
+    },
+    style : {
+      background: 'rgb(250, 250, 250)',
+  }
   })
   d3.select('#chart').append(() => chart)
 })

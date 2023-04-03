@@ -1,8 +1,8 @@
  d3.csv('astronautas.csv', d3.autoType).then(data => {
     console.log(data)
     let chart = Plot.plot({
-      width : 1100,
-      height : 400,
+      height: 500,
+      width: 1200,
       grid: true,
       padding : 0.5,
       margin : 60,

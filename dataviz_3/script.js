@@ -2,12 +2,14 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   let chart = Plot.plot({
     height: 500,
     width: 1000,
+    grid: true,
     marks: [
       Plot.line(data, Plot.groupX({y : 'count'}, {
         x:'anio_mision', 
         y : 'nombre', 
         z : 'ocupacion', 
         stroke: 'ocupacion',
+        strokeWidth: 3,
         curve: 'natural', 
         })), 
         Plot.dot(data, Plot.groupX({y : 'count'}, {
@@ -15,13 +17,13 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           y : 'nombre', 
           z : 'ocupacion', 
           stroke: 'ocupacion',
-          strokeWidth: 6,
+          strokeWidth: 4,
           })), 
     ],
     
     x: {
       label : 'Año',
-      labelOffset : 50,
+      labelOffset : 30,
       tickFormat: 'i',
     },
     y: { 
@@ -31,7 +33,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     },
     line: true,
     color:{
-      scheme: 'set1',
+      scheme: 'warm',
       legend: true,
     },
     style :{

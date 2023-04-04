@@ -3,7 +3,6 @@
     let chart = Plot.plot({
       height: 500,
       width: 1200,
-      grid: true,
       padding : 0.5,
       margin : 60,
         marks: [

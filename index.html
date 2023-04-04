@@ -2,8 +2,22 @@
 <html lang = "en">
 <head>
     <style>
+        .center {
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          text-align: center;
+          font-size: 18px;
+        }
         h1 {
             text-align: center;
+            font-size: 40px;
+            color: #665544;
+        }
+        h4 {
+            text-align: center;
+            font-weight: 1;
+            font-size: 15px;
         }
         button {
             background-color: #665544;
@@ -12,50 +26,49 @@
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: 20px;
             border-radius: 5px;
-            padding: 10px;
+            padding: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
             cursor: pointer;
         }
         body {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             color: #665544;
             padding: 20px;
-            background-color: rgb(250, 250, 250);
-          }
+            background-color: rgba(250,250,250,1);
+            }
+        p {
+            font-size: 15px;
+            font-weight: 1;
+            color: #5a5a5a;
+        }
+        img {
+            background-color: #665544;
+        }
     </style>
 </head>
 <body>
+    <img src="//campusvirtual.utdt.edu/pluginfile.php/1/theme_trema/logoheader/1680638758/logo_header.png">
     <h1> Trabajo Practico N<sup>o</sup>2: Explicar con datos </h1>
+    <h4><i>por Juan Ignacio Vila Bach y Victor Navajas</i></h4>
     
-    
-
     <ul>
-        <div>
-        <a href="dataviz_1/index.html">
-            <button type = "button">Gráfico 1</button>
-        </a>
+        <div class="center", style = "left: -250px; top: 250px">
+        <h3><i>¿Cuantos años tiene un astronauta promedio?</i></h3><p> Tomamos un promedio de las edades de los astronautas divididos<br>por género y las comparamos.</p>
+        <div><a href="dataviz_1/index.html"><button type = "button">Gráfico</button></a></div>
         </div>
-       <br> 
-        <div>
-        <a href="dataviz_2/index.html">
-            <button type = "button">Gráfico 2</button>
-        </a>
+        <div class="center", style = "left: 250px; top: 250px">
+        <h3><i>¿Que país completó más horas de misión?</i></h3><p>Comparamos el total de horas de misión completadas por cada país.</p>
+        <div><a href="dataviz_2/index.html"><button type = "button", style = "margin-top: 20px;">Gráfico</button></a></div>
         </div>
-        <br>
-        <div>
-            <a href="dataviz_3/index.html">
-                <button type = "button">Gráfico 3</button>
-            </a>
+        <div class="center", style = "left: -250px; top: 500px">
+        <h3><i>¿Como estaban distribuidas las ocupaciones<br> de los astronautas en cada misión?</i></h3><p>Por ocupación, medimos la frecuencia relativa de esa dada<br> ocupación en la tripulación de una misión </p>
+        <div><a href="dataviz_3/index.html"></a><button type = "button">Gráfico</button></a></div>
         </div>
-        <br>
-        <div>
-            <a href="dataviz_4/index.html">
-                <button type = "button">Gráfico 4</button>
-            </a>
+        <div class="center", style = "left: 250px; top: 500px">
+        <h3><i>¿Cuantos coetáneos hubieron en cada misión?</i><br><br></h3><p>Contamos la cantidad de astronautas con el mismo año <br>de nacimiento en una dada misión</p>
+        <div><a href="dataviz_4/index.html"><button type = "button", style = "margin-top: px">Gráfico</button></a></div>
         </div>
-        <!-- <li><a href="dataviz_2/index.html">Visualización 2</a></li>
-        <li><a href="dataviz_3/index.html">Visualización 3</a></li>
-        <li><a href="dataviz_4/index.html">Visualización 4</a></li>
-    -->
     </ul>
 </body>
 </html>

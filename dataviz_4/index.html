@@ -7,13 +7,14 @@
     <title>Visualización 4</title>
     <style>
       button {
-        background-color: #665544;
-        color : rgb(255, 255, 255);
+        background-color:rgb(250, 250, 250);
+        color : #665544;
         border: none;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 20px;
+        font-size: 15px;
         border-radius: 5px;
         padding: 10px;
+        cursor: pointer;
       }
       #chart{
         overflow-y:auto;
@@ -32,7 +33,9 @@
         font-size: 20px;
       }
       p {
+        text-align: right;
         font-size: 10px;
+        text-align: right;
       }
       body {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -45,21 +48,21 @@
       }
       #chart svg{
         max-width: initial;
+        background-color: transparent;
       }
     </style>
   </head>
-  <body>
-    <h1>¿Quienes pasaron más tiempo en misión?</h1>
-    <h2>Cada ocupacion se ve diferenciada entre civiles y militares para mas detalle.</h2
-    </style>
   </head>
   <body>
     
-
+    <h1>¿Cuantos coetáneos hubieron en cada misión?</h1>
+    <h2>Contamos la cantidad de astronautas con el mismo año <br>de nacimiento en una dada misión</h2>
     <div id="chart"></div>
-    <p><i>Datos obtenidos de <b>Astronautas.csv</b></i></p>
+    <p><i>Datos recopilados por la NASA (Estados Unidos), Roscosmos (Rusia) y otros sitios.</i></p>
     <p><i>Autores: Juan Vila Bach, Victor Navajas</i></p>
-
+    <a href="../../index.html">
+      <button type = "button">menu</button>
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>

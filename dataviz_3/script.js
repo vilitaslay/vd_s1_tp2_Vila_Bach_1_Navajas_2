@@ -17,7 +17,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           y : 'nombre', 
           z : 'ocupacion', 
           stroke: 'ocupacion',
-          strokeWidth: 4,
+          strokeWidth: 3,
           })), 
     ],
     
@@ -33,7 +33,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     },
     line: true,
     color:{
-      scheme: 'warm',
+      scheme: 'set2',
       legend: true,
     },
     style :{

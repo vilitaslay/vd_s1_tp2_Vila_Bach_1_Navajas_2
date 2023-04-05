@@ -1,7 +1,7 @@
 d3.csv('astronautas.csv', d3.autoType).then(data => {
   let chart = Plot.plot({
     height: 500,
-    width: 1000,
+    width: 1200,
     grid: true,
     marks: [
       Plot.line(data, Plot.groupX({y : 'count'}, {

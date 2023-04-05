@@ -6,7 +6,7 @@
       padding : 0.5,
       margin : 60,
         marks: [
-            Plot.barY(data,  {
+            Plot.barY(data, {
               x: 'nacionalidad',
               y: 'mision_hs',
               fill: d => (d.nacionalidad == 'U.S.S.R/Rusia' ? 'rgb(150, 50, 50)' : 'grey'),
@@ -15,10 +15,11 @@
         }),
             Plot.text(data, {
               x: 'nacionalidad',
-              y: 'mision_hs',
-              text: d => (d.nacionalidad == 'U.S.S.R/Rusia' ? (d == 200000 ? '200000': null) : null)
-            })
-
+              y: 'mision_hs', 
+              text: ['215,184'],
+              fill: 'rgb(150, 50, 50)',
+              dy: -385,
+            }),
         ],
         x : {
           label : 'Nación',

@@ -12,6 +12,16 @@
       #chart svg{
         max-width: initial;
       }
+      button {
+        background-color:#665544;
+        color : rgb(250, 250, 250);
+        border: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+      }
       body {
           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
           margin: 50px;
@@ -22,20 +32,24 @@
         font-weight: 1;
       }
       p {
+        text-align: right;
         font-size: 10px;
 
       }
     </style>
   </head>
   <body>
-    <h1>¿Que país estuvo más tiempo en el espacio?</h1>
-    <h3>Se evalua el total de horas en misión de cada pais.</h3>
+    
+    <h1>¿Que país completó más horas de misión?</h1>
+    <h3>Comparamos el total de horas de misión completadas por cada país.</h3>
 
     <div id="chart"></div><br>
-    <p><i>Datos obtenidos de <b>Astronautas.csv</b></i></p>
+    <a href="../../index.html">
+      <button type = "button">menu</button>
+    </a>
+    <p><i>Datos recopilados por la NASA (Estados Unidos), Roscosmos (Rusia) y otros sitios.</i></p>
     <p><i>Autores: Juan Vila Bach, Victor Navajas</i></p>
-
-    <div id="chart"></div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>

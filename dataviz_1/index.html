@@ -7,8 +7,8 @@
     <title>Visualización 1</title>
     <style>
       button {
-        background-color:rgb(250, 250, 250);
-        color : #665544;
+        background-color:#665544;
+        color : rgb(250, 250, 250);
         border: none;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 15px;
@@ -18,6 +18,7 @@
       }
       #chart{
         overflow-y:auto;
+        font-weight: 400;
       }
       #chart svg{
         max-width: initial;
@@ -37,19 +38,21 @@
         font-weight: 1;
       }
       p {
+        text-align: right;
         font-size: 10px;
       }
     </style>
   </head>
   <body>
+    
+    <h1>¿Cuantos años tiene un astronauta promedio?</h1>
+    <h3>Tomamos un promedio de las edades de los astronautas divididos por género y las comparamos.</h3>
+
+    <div id="chart"></div><br>
     <a href="../../index.html">
       <button type = "button">menu</button>
     </a>
-    <h1>Edades Promedio</h1>
-    <h3>Analizamos como cambia el promedio de la edad de los astronautas a lo largo de los años, dividido entre mujeres y hombres.</h3>
-
-    <div id="chart"></div><br>
-    <p><i>Datos obtenidos de <b>NASA,  </b></i></p>
+    <p><i>Datos recopilados por la NASA (Estados Unidos), Roscosmos (Rusia) y otros sitios.</i></p>
     <p><i>Autores: Juan Vila Bach, Victor Navajas</i></p>
     
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>

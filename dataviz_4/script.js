@@ -13,7 +13,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     nice: true,
     zero: true,
     height: 500,
-    width: 1000,
+    width: 1200,
     margin : 50,
     x : {
       label : null,
@@ -27,11 +27,11 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     color : {
       scheme: 'greens',
       nice: true,
-      legend: "ramp",
+      legend: true,
     },
     style : {
       background: 'rgb(250, 250, 250)',
-  }
+    }
   })
   d3.select('#chart').append(() => chart)
 })
